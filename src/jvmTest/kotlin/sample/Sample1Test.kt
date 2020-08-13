@@ -24,12 +24,19 @@
 
 package sample
 
-import kotlin.test.Test
-import kotlin.test.assertTrue
+import org.amshove.kluent.`should be equal to`
+import org.junit.Test
 
-class SampleTests {
+class Sample1Test {
+    private val simple = Sample1()
+
     @Test
-    fun testMe() {
-        assertTrue(Sample().checkMe() > 0)
+    fun plus() {
+        simple.plus(5, 6) `should be equal to` 11
+    }
+
+    @Test
+    fun addString() {
+        simple.addString("Hello") `should be equal to` "Hello Test Kotlin"
     }
 }

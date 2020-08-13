@@ -24,12 +24,7 @@
 
 package sample
 
-import kotlin.test.Test
-import kotlin.test.assertTrue
-
-class SampleTestsJVM {
-    @Test
-    fun testHello() {
-        assertTrue("JVM" in hello())
-    }
+class Sample1 {
+    fun plus(i: Int, j: Int): Int = i + j
+    fun addString(string: String): String = "$string Test Kotlin"
 }
